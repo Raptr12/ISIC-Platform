@@ -1,0 +1,361 @@
+<head>
+    <meta charset="utf-8">
+    <title>Here We Grow</title>
+    <script>
+        $(window).on('scroll',function(){
+        if($(window).scrollTop()){
+          $('nav').addClass('black');
+        }else {
+          $('nav').removeClass('black');
+        }
+      })
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Ubuntu');
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: 'Ubuntu', sans-serif;
+  line-height: 180%;
+  color: #666;
+  text-align: center;
+}
+nav{
+  position: fixed;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  padding: 10px 60px;
+  box-sizing: border-box;
+  transition: .5s;
+  z-index: 5;
+  opacity: 1;
+}
+nav.black{
+  background: rgba(0,0,0,.8);
+  height: 80px;
+  padding: 10px 50px;
+}
+nav .logo{
+  float: left;
+}
+nav .logo img{
+  height: 80px;
+  transition: .5s;
+}
+nav.black .logo img{
+  height: 60px;
+}
+nav ul{
+  float: right;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+nav ul li{
+  list-style: none;
+  margin-top: 25px;
+  line-height: none;
+  font-size: 18px;
+  color: white;
+  padding: 5px 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 1s;
+  text-shadow: 0 0 10px #000;
+}
+/* nav ul li a{
+  line-height: none;
+  font-size: 18px;
+  color: white;
+  padding: 5px 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 1s;
+  text-shadow: 0 0 10px #000;
+} */
+
+/* nav.black ul li a{
+  color: #fff;
+  line-height: 20px;
+} */
+nav.black ul li{
+  color: #fff;
+  line-height: 20px;
+}
+/* nav ul li a.active,
+nav ul li a:hover{
+  color: orange;
+} */
+nav ul li.active,
+nav ul li:hover{
+  color: orange;
+}
+
+.parallax1 {
+  background: url("https://homesteading.com/wp-content/uploads/2016/02/hands-trees-growing-seedlings-bokeh-green-background-female-hand-holding-tree-nature-field-grass-forest-conservation-Growing-Trees-for-Profit-dt-Feature.jpg");
+  min-height: 100%;
+}
+.parallax2 {
+  background: url("https://www.upr.org/sites/upr/files/styles/medium/public/201804/0_12.jpg");
+  min-height: 60%;
+}
+.parallax3 {
+  background: url("https://s3.amazonaws.com/finegardening.s3.tauntoncloud.com/app/uploads/2018/01/23201635/american-sycamore-bark.jpg");
+  min-height: 40%;
+}
+.parallax4 {
+  background: url("https://www.todaysparent.com/wp-content/uploads/2018/03/daycare_worker_1280x960-1024x576-1519919808.jpg");
+  min-height: 60%;
+}
+.parallax5 {
+  background: url("http://www.babysitting.academy/wp-content/uploads/2015/01/kids-hands-holding-plants-yolo-farm-to-fork-1030x686.jpg");
+  min-height: 50%;
+}
+.parallax6 {
+  background: url("https://www.abcgreatbeginnings.com/wp-content/uploads/2016/08/home-slide1-compressor-2560x1316.jpg");
+  min-height: 100%;
+}
+.parallax1, .parallax2, .parallax3, .parallax4, .parallax5, .parallax6 {
+  position: relative;
+  opacity: .75;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.heading {
+  position: absolute;
+  color: #fff;
+  font-size: 550%;
+  top: 38%;
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  text-shadow: 0 0 10px #000;
+}
+.heading2 {
+  position: absolute;
+  color: #fff;
+  font-size: 150%;
+  top: 50%;
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  text-shadow: 0 0 10px #000;
+}
+.heading-sm {
+  position: absolute;
+  top: 45%;
+  width: 100%;
+  color: #fff;
+  font-size: 250%;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  text-shadow: 0 0 10px #000;
+}
+.two-col{
+  float: left;
+  width: 42%;
+  padding: 0 4%;
+  text-align: center;
+}
+section {
+  overflow: auto;
+  padding: 50px 80px;
+}
+.dark{
+  overflow: auto;
+  padding: 50px 80px;
+  background-color: #323232;
+  color: #f2f2f2;
+}
+@media (max-width: 900px){
+  nav ul li{
+    font-size: 12px;
+  }
+  .heading{
+    font-size: 250%;
+  }
+}
+@media (max-width: 600px){
+  .heading{
+    font-size: 250%;
+  }
+  .heading-sm{
+    font-size: 180%
+  }
+  .two-col {
+    width: 100%;
+    padding: 0;
+    text-align: center;
+  }
+  nav ul li{
+    font-size: 8px;
+  }
+}
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <img src="https://openclipart.org/image/2400px/svg_to_png/261002/Prismatic-Hands-Tree-2-No-Background.png" alt="logo">
+      </div>
+      <div class="menu-icon">
+        <i class="fa fa-bars fa-2x"></i>
+      </div>
+      <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Curriculum</li>
+        <li>Classrooms</li>
+        <li>Employment</li>
+        <li>Contact</li>
+      </ul>
+    </nav>
+    <div class="parallax1">
+      <div class="heading">Here We Grow</div>
+      <div class="heading2">Early Childhood Learning</div>
+    </div>
+
+    <section>
+      <h1>About Us</h1>
+      <div class="two-col">
+        <p>At Here We Grow, Early Childhood Learning, we believe each child is a unique gift. Our staff provides the utmost quality of care by retaining a safe, clean, healthy and loving environment in which each child can grow and learn. We maintain a high level of sensitivity to the social, emotional, intellectual, physical, and creative needs each child has so that we may tailor our program to fit each child’s necessities. Our goal is to encourage each child to develop a positive self-image and develop a sense of pride and accomplishment throughout their exploration of growing and learning.</p>
+      </div>
+      <div class="two-col">
+        <p>Here We Grow, Early Childhood Learning, is a family owned and operated childcare center.Our center is licensed to care for children between 6 weeks and 6 years. At Here We Grow we value a nutritious homemade diet as well as an enriched, educationally based curriculum. We feel as though learning doesn't just occur in the classroom but through hands on experiences as well. A great example of this can be seen in our garden, in the summer, as the children assist their teachers in caring for the garden. Furthermore, we believe that keeping the lines of communication open and smooth flowing are crucial in developing happy and healthy relationships with our families. Our doors are always open and we encourage parents to be as involved as they like!</p>
+      </div>
+    </section>
+
+    <div class="parallax2">
+      <div class="heading-sm">
+        The Kids
+      </div>
+    </div>
+
+    <section class="dark">
+      <h2>Curriculum</h2>
+      <p>Here We Grow implements The Creative Curriculum for Infants, Toddlers, and Twos in the Seedlings, Pea Pods, and Peaches classrooms. In the Sun Rays, Rain Drops, and Dandelions classrooms, The Creative Curriculum for Preschool will be used. We feel as though these curriculums are a great guide in the classroom!</p>
+<h3>The Creative Curriculum® for Infants, Toddlers & Twos</h3>
+<p>The Creative Curriculum for Infants, Toddlers & Twos is a comprehensive curriculum that now offers expanded daily support, guidance, and inspiration to teachers and caregivers of the youngest learners. It consists of The Foundation, three research-based volumes that provide the “what” and “why” of responsive caregiving, and brand-new Daily Resources, which offer the important “how” to help foster children’s learning and growth.
+The Creative Curriculum for Infants, Toddlers & Twos
+is based on 38 objectives for development and learning, which are fully aligned with the School Readiness Goals for Infants and Toddlers in Head Start and early learning standards for each state.
+helps teachers and caregivers implement developmentally appropriate practices and offer responsive daily routines and meaningful experiences that nurture learning and development.
+offers daily opportunities for teachers and caregivers to use assessment information to individualize routines and experiences for young children.
+provides built-in guidance for building the kind of meaningful partnerships with families that are an essential factor in how infants, toddlers and twos experience your program and how much they gain from it.
+offers complete support in classrooms where children are learning two languages</p>
+<h3>The Creative Curriculum® for Preschool</h3>
+<p>The Creative Curriculum for Preschool® is an award-winning curriculum for preschool success. Comprising The Foundation, five research-based volumes that provide the knowledge base of the curriculum, and the Daily Resources, which offer step-by-step guidance in the form of Teaching Guides and additional daily teaching tools, The Creative Curriculum for Preschool is fully aligned with the Head Start Child Development and Early Learning Framework and state early learning standards.
+Using exploration and discovery as a way of learning, The Creative Curriculum for Preschool enables children to develop confidence, creativity, and lifelong critical thinking skills.
+The Creative Curriculum for Preschool
+is based on 38 objectives for development and learning, which are fully aligned with the Head Start Child Development and Early Learning Framework as well as early learning standards for every state.
+presents knowledge-building volumes and daily practice resources in tandem, giving every educator the “what,” “why” and “how” of early childhood education.
+offers daily opportunities to individualize instruction, helping teachers meet the needs of every type of learner.
+addresses all the important areas of learning, from social-emotional and math to technology and the arts, and incorporates them throughout every part of every day.
+offers daily, built-in opportunities for observation, helping teachers and administrators clearly see the strong relationship between curriculum and assessment.
+offers complete support for working with English- and dual-language learners, including detailed guidance that helps to build teachers’ knowledge about best practices.
+contains guidance for working with all learners, including advanced learners and children with disabilities.</p>
+    </section>
+
+    <div class="parallax3">
+    </div>
+  <section>
+    <div>
+      <h3>Classrooms</h3>
+      <div class="two-col">
+        <p>Seedlings (6 weeks to 18 months)</p>
+        <p>Peapods (12 months to 24 months)</p>
+        <p>Peaches (18 months to 3 years)</p>
+      </div>
+      <div class="two-col">
+        <p>Sun Rays (Preschool: 2 1/2 years to 4 years)</p>
+        <p>Rain Drops (Preschool: 4 years to 6 years)</p>
+      </div>
+    </div>
+  </section>
+
+    <div class="parallax4">
+      <div class="heading-sm">
+        Employment
+      </div>
+    </div>
+
+    <section class="dark">
+      <h2>Employment Opportunities</h2>
+      <p>Contact: Important Person <br>
+        Email: importantperson@gmail.com<br>
+        Positions: Substitutes, an Assistant Preschool Teacher, and Assistant Toddler Teacher<br>
+        Organization: Here We Grow, Early Childhood Learning<br>
+        Location: AwesomeVille, USA<br>
+        Phone: (333) 867-5309<br>
+        Status: Full Time
+      </p>
+
+      <p>Application requirements: Must meet, or be willing to meet, all the State of Colorado requirements for an Early Childhood Teacher. This includes experience and education. An Early Childhood Education degree is preferred but not required.
+If you are interested, please stop by and fill out an application or email us your resume at importantperson@gmail.com!</p>
+    </section>
+
+    <div class="parallax5">
+    </div>
+
+    <section>
+      <div>
+        <h3>Contact Us</h3>
+        <div class="container">
+          <form action="/action_page.php">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name..">
+
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email" placeholder="Your Email..">
+
+            <label for="phone">Phone</label>
+            <input type="text" id="phone" name="phone" placeholder="Your phone number..">
+
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Subject..">
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Write something.." style="height:200px"></textarea>
+
+            <input type="submit" value="Submit">
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <div class="parallax6">
+    </div>
+  </body>
