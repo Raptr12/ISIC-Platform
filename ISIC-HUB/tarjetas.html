@@ -6,46 +6,102 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700&amp;subset=latin-ext' rel='stylesheet'type='text/css'>
 	<link href="https://www.isic.org/wp-content/themes/isic2013/css/style.css?v=3.1" type="text/css" rel="stylesheet" />
+	<style>
+		.site-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 20px;
+		background-color: #43bab5;
+		}
+
+		.site-header .logo-wrapper {
+		margin-right: 20px;
+		}
+
+		.site-header .main-navigation {
+		display: flex;
+		width: 70%;
+		}
+
+		.site-header .menu-list {
+		display: flex;
+		align-items: center;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		}
+
+		.site-header .menu-item {
+		margin-left: 20px;
+		border-radius: 20px;
+		overflow: hidden;
+		white-space: nowrap;
+		}
+
+		.site-header .menu-item a {
+		display: block;
+		padding: 10px;
+		color: #fff;
+		text-decoration: none;
+		font-weight: bold;
+		}
+
+		.site-header .menu-item a:hover {
+		background-color: #fff;
+		color: #00CED1;
+		border-radius: 20px;
+		}
+
+		.logo-wrapper {
+		background-color: white;
+		border-radius: 20px;
+		padding: 10px;
+		}
+
+		.logo-wrapper img {
+		max-width: 100%;
+		border-radius: 10px;
+		}
+	</style>
 </head>
 <body>
-	<header>
-		<div class="top full-width">
-			<div class="logo-wrapper">
-				<div id="logo" style="width:370px;height:114px;">
-					<a href="index.html">
-						<img src="https://s3-eu-west-1.amazonaws.com/media.isic.org/isicwp/uploads/2019/05/ISIC_web_logo-2.jpg"
-							alt="ISIC" />
-					</a>
-				</div>
+	<header class="site-header">
+		<div class="top-header">
+		  <div class="logo-wrapper">
+			<div class="logo">
+			  <a href="index.html">
+				<img src="https://s3-eu-west-1.amazonaws.com/media.isic.org/isicwp/uploads/2019/05/ISIC_web_logo-2.jpg" alt="ISIC">
+			  </a>
 			</div>
+		  </div>
 		</div>
-		<div id="top-navigation">
-			<a href="index.html" class="toggle-menu">Menu</a>
-			<nav class="full-width">
-				<ul id="menu-main-navigation" class="menu">
-					<li class="menu-item">
-						<a href="index.html">Inicio</a>
-					</li>
-					<li class="menu-item current-menu">
-						<a href="descuentos.html">Descuentos</a>
-					</li>
-					<li class="menu-item">
-						<a href="tarjetas.html">Tarjetas</a>
-					</li>
-					<li class="menu-item">
-						<a href="obten_tu_tarjeta.html">Obtenga su tarjeta</a>
-					</li>
-					<li class="menu-item">
-						<a href="FAQs.html">FAQs</a>
-					</li>
-					<li class="menu-item">
-						<a href="sobre_nosotros.html">Sobre nosotros</a>
-					</li>
-					<li class="menu-item">
-						<a href="contactenos.html">Contáctenos</a>
-					</li>
-				</ul>
-			</nav>
+		<div class="bottom-header">
+		  <nav class="main-navigation">
+			<ul class="menu-list">
+			  <li class="menu-item">
+				<a href="index.html">Inicio</a>
+			  </li>
+			  <li class="menu-item current-menu-item">
+				<a href="descuentos.html">Descuentos</a>
+			  </li>
+			  <li class="menu-item">
+				<a href="tarjetas.html">Tarjetas</a>
+			  </li>
+			  <li class="menu-item">
+				<a href="obten_tu_tarjeta.html">Obtenga su tarjeta</a>
+			  </li>
+			  <li class="menu-item">
+				<a href="FAQs.html">FAQs</a>
+			  </li>
+			  <li class="menu-item">
+				<a href="sobre_nosotros.html">Sobre nosotros</a>
+			  </li>
+			  <li class="menu-item">
+				<a href="contactenos.html">Contáctenos</a>
+			  </li>
+			</ul>
+		  </nav>
 		</div>
 	</header>
 

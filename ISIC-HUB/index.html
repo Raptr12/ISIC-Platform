@@ -100,6 +100,12 @@
 		background-attachment: fixed;
 		height: 600px;
 		}
+		.parallax4 {
+		background-image: url("assets/food.jpg");
+		background-size: cover;
+		background-attachment: fixed;
+		height: 600px;
+		}
 		.parallax1, .parallax2, .parallax3, .parallax4, .parallax5, .parallax6 {
 		position: relative;
 		opacity: .75;
@@ -109,15 +115,24 @@
 		background-attachment: fixed;
 		}
 		.heading_ISIC {
-		position: absolute;
-		color: #fff;
-		font-size: 550%;
-		top: 38%;
-		width: 100%;
-		text-transform: uppercase;
-		letter-spacing: 8px;
-		text-shadow: 0 0 10px #000;
-		padding: 50px 80px;
+			position: absolute;
+			top: 38%;
+			width: 100%;
+			padding: 50px 80px;
+			text-transform: uppercase;
+			letter-spacing: 8px;
+			text-shadow: 0 0 10px #000;
+			font-size: 5rem; /* Tamaño de fuente */
+			color: white; /* Color de fuente */
+		}
+		.heading_ISIC span:first-child {
+			color: #ffffff;
+			font-weight: 600;
+		}
+
+		.heading_ISIC span:last-child {
+			color: #7acdcd;
+			font-weight: 600;
 		}
 		.heading2_ISIC {
 		position: absolute;
@@ -135,7 +150,6 @@
 			bottom: 15%;
 			left: 5%;
 			margin: 0;
-			padding: 12px 16px;
 		}
 		section {
 		overflow: auto;
@@ -187,7 +201,7 @@
 	</header>
 	  
 	<div class="parallax1">
-		<div class="heading_ISIC">ISIC PANAMÁ</div>
+		<div class="heading_ISIC"><span>ISIC</span> <span>PANAMÁ</span></div>
 		<div class="heading2_ISIC">Bienvenidos a ISIC Panamá, conoce todos nuestros descuentos que tenemos para ofrecerte</div>
 	</div>
 	<section>
@@ -199,9 +213,9 @@
 		</div>
 	</section>
 	<div class="parallax2">
-		<div class="heading_ISIC">ADQUIERE TU CARNET</div>
+		<div class="heading_ISIC"><span>ADQUIERE</span> <span>TU CARNET</span></div>
 		<div class="heading2_ISIC">Ingresa y sigue los pasos para adquirir tu carnet y sigue disfrutando de nuestros descuentos</div>
-		<div class="buttons"></div><a class="btn-dark" href="tarjetas.html"><span>Ingresa Aquí</span></a></div>
+		<a class="btn-dark" href="tarjetas.html"><span>Ingresa Aquí</span></a>
 	</div>
 	<section>
 		<div>
@@ -212,9 +226,9 @@
 		</div>
 	</section>
 	<div class="parallax3">
-		<div class="heading_ISIC">ACTIVA TU CARNET VIRTUAL</div>
+		<div class="heading_ISIC"><span>ACTIVA</span> <span>TU CARNET VIRTUAL</span></div>
 		<div class="heading2_ISIC">Disfruta de tus beneficios desde tu dispositivo móvil</div>
-		<div class="buttons"></div><a class="btn-dark" href="obten_tu_tarjeta.html"><span>Ingresa Aquí</span></a></div>
+		<a class="btn-dark" href="obten_tu_tarjeta.html"><span>Ingresa Aquí</span></a>
 	</div>
 	<section>
 		<div>
@@ -225,9 +239,9 @@
 		</div>
 	</section>
 	<div class="parallax4">
-		<div class="heading_ISIC">ACTIVA TU CARNET VIRTUAL</div>
-		<div class="heading2_ISIC">Disfruta de tus beneficios desde tu dispositivo móvil</div>
-		<div class="buttons"></div><a class="btn-dark" href="obten_tu_tarjeta.html"><span>Ingresa Aquí</span></a></div>
+		<div class="heading_ISIC"><span>OBTÉN</span> <span>BENEFICIOS CON TU CARNET</span></div>
+		<div class="heading2_ISIC"> Desde descuentos en tus tiendas favoritas hasta promociones especiales en eventos y actividades locales, nuestro carné te permite aprovechar al máximo tu experiencia.</div>
+		<a class="btn-dark" href="descuentos.html"><span>Ingresa Aquí</span></a>
 	</div>
 	<div id="container">
 		<div class="content-wrapper">
