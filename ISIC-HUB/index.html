@@ -1,151 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <title>ISIC</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href='https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700&amp;subset=latin-ext' rel='stylesheet' type='text/css'>
-	<link href="https://www.isic.org/wp-content/themes/isic2013/css/style.css?v=3.1" type="text/css" rel="stylesheet" />
-	<script type="text/javascript" src="https://www.isic.org/wp-content/themes/isic2013/js/vendor/jquery.min.js"></script>
-	<script type="text/javascript" src="https://www.isic.org/wp-content/themes/isic2013/js/buttons.js?v=2"></script>
-	<script type="text/javascript" src="https://www.isic.org/wp-content/themes/isic2013/js/rotator.js?v=2"></script>
-	<script type="text/javascript" src="https://www.isic.org/wp-content/themes/isic2013/js/page.js?v=2"></script>
-	<style>
-		.nosotros-entidades-box ul {
-			display: table;
-			list-style: none;
-			margin: 0;
-			padding: 0;
-			width: 100%;
-			text-align: center;
-		}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700&amp;subset=latin-ext' rel='stylesheet' type='text/css'>
+    <link href="https://www.isic.org/wp-content/themes/isic2013/css/style.css?v=3.1" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="https://www.isic.org/wp-content/themes/isic2013/js/vendor/jquery.min.js"></script>
+    <script type="text/javascript" src="https://www.isic.org/wp-content/themes/isic2013/js/buttons.js?v=2"></script>
+    <script type="text/javascript" src="https://www.isic.org/wp-content/themes/isic2013/js/rotator.js?v=2"></script>
+    <script type="text/javascript" src="https://www.isic.org/wp-content/themes/isic2013/js/page.js?v=2"></script>
+    <style>
+        .nosotros-entidades-box ul {
+            display: table;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            text-align: center;
+        }
+        
+        .nosotros-entidades-box ul li {
+            display: inline-block;
+            vertical-align: top;
+            margin: 10px;
+            width: calc(25% - 20px);
+            /* se especifica el ancho de cada elemento, teniendo en cuenta los márgenes */
+        }
+        
+        .slide {
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            height: auto;
+            /* Change height to auto for responsiveness */
+            object-fit: cover;
+        }
+        
+        @media (max-width: 767px) {
+            /* Styles for phones */
+            #header-slider {
+                width: 100%;
+                max-height: 250px;
+            }
+            .slider,
+            .slide {
+                height: auto !important;
+            }
+            .slide .content {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: auto;
+            }
+            .slide img {
+                width: 100%;
+                height: auto;
+            }
+            .slide .buttons {
+                margin-top: 20px;
+            }
+            .quick-slide {
+                margin-top: 20px;
+            }
+        }
+        /* CSS del card descuentos internacionales */
+        
+        .card {
+            display: flex;
+            border-radius: 20px;
+            border: 1px solid #ccc;
+            overflow: hidden;
+            background-color: #006565;
+        }
+        
+        .card-image {
+            width: 100px;
+            margin-left: 5px;
+            position: relative;
+            margin-top: 8px;
+        }
+        
+        .card-image img {
+            width: 100%;
+            height: auto;
+        }
+        
+        .card-content {
+            padding: 10px;
+            margin-left: 30px;
+        }
+        
+        .card-content h3 {
+            font-size: 16px;
+            color: #fff;
+            margin-top: 0;
+            margin-bottom: 5px;
+        }
+        
+        .card-content .btn {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 3px;
+            background-color: #81d0d0;
+            color: #000000;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .card-content .btn:hover {
+            background-color: #a5e4e4;
+            /* Color más claro en el hover */
+        }
+    </style>
+</head>
 
-		.nosotros-entidades-box ul li {
-			display: inline-block;
-			vertical-align: top;
-			margin: 10px;
-			width: calc(25% - 20px); /* se especifica el ancho de cada elemento, teniendo en cuenta los márgenes */
-		}
-
-		.slide {
-			background-size: cover;
-			background-position: center;
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
-		}
-
-		/* CSS del card descuentos internacionales */
-		.card {
-			display: flex;
-			border-radius: 20px;
-			border: 1px solid #ccc;
-			overflow: hidden;
-			background-color: #006565;
-		}
-
-		.card-image {
-			width: 100px;
-			margin-left: 5px;
-			position: relative;
-			margin-top: 8px;
-		}
-
-		.card-image img {
-			width: 100%;
-			height: auto;
-		}
-
-		.card-content {
-			padding: 10px;
-			margin-left: 30px;
-		}
-
-		.card-content h3 {
-			font-size: 16px;
-			color: #fff;
-			margin-top: 0;
-			margin-bottom: 5px;
-		}
-
-		.card-content .btn {
-			display: inline-block;
-			padding: 5px 10px;
-			border-radius: 3px;
-			background-color: #81d0d0;
-			color: #000000;
-			text-decoration: none;
-			font-weight: bold;
-		}
-
-		.card-content .btn:hover {
-			background-color: #a5e4e4; /* Color más claro en el hover */
-		}
-
-	</style>
-  </head>
-  <body>
+<body>
     <header>
-      <div class="top full-width">
-        <div class="logo-wrapper">
-          <div id="logo" style="width: 370px; height: 114px">
-            <a href="index.html">
-              <img
-                src="https://s3-eu-west-1.amazonaws.com/media.isic.org/isicwp/uploads/2019/05/ISIC_web_logo-2.jpg"
-                alt="ISIC"
-              />
-            </a>
-          </div>
+        <div class="top full-width">
+            <div class="logo-wrapper">
+                <div id="logo" style="width: 370px; height: 114px">
+                    <a href="index.html">
+                        <img src="https://s3-eu-west-1.amazonaws.com/media.isic.org/isicwp/uploads/2019/05/ISIC_web_logo-2.jpg" alt="ISIC" />
+                    </a>
+                </div>
+            </div>
         </div>
-      </div>
-      <div id="top-navigation">
-		<a href="index.html" class="toggle-menu">Menu</a>
-		<nav class="full-width">
-			<ul id="menu-main-navigation" class="menu">
-				<li class="menu-item">
-					<a href="index.html">Inicio</a>
-				</li>
-				<li class="menu-item">
-					<a href="tarjetas.html">Tipos de Carnets</a>
-				</li>
-				<li class="menu-item current-menu">
-					<a href="descuentos.html">Descuentos</a>
-				</li>
-				<li class="menu-item">
-					<a href="obten_tu_tarjeta.html">Obtenga su tarjeta</a>
-				</li>
-				<li class="menu-item">
-					<a href="sobre_nosotros.html">Acerca de nosotros</a>
-				</li>
-				<li class="menu-item">
-					<a href="FAQs.html">FAQs</a>
-				</li>
-				<li class="menu-item">
-					<a href="contactenos.html">Contáctenos</a>
-				</li>
-			</ul>
-		</nav>
-	</div>
+        <div id="top-navigation">
+            <a href="index.html" class="toggle-menu">Menu</a>
+            <nav class="full-width">
+                <ul id="menu-main-navigation" class="menu">
+                    <li class="menu-item">
+                        <a href="index.html">Inicio</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="tarjetas.html">Tipos de Carnets</a>
+                    </li>
+                    <li class="menu-item current-menu">
+                        <a href="descuentos.html">Descuentos</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="obten_tu_tarjeta.html">Obtenga su Tarjeta</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="activa_tu_carnet.html">Activa tu Carnet</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="sobre_nosotros.html">Acerca de Nosotros</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="FAQs.html">FAQs</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="contactenos.html">Contáctenos</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <section id="top-content" class="home-banner">
-		<a class="header-slider left-arrow"></a>
-		<div id="header-slider" class="full-width" style="height: 600px;">
-		  <ul class="slider" style="height: 600px;">
-			<li
-			  class="slide"
-			  style="background-image: url(assets/1.png); background-size: cover; height: 600px;">
-			  <div class="content">
-				<!-- <div class="text">
-				  <h2>ISIC App Global y una ID Virtual</h2>
-				  Carné Internacional de Estudiantes ISIC con descuentos y beneficios en Panamá y en 135 países.
-				  Único Documento Internacional Avalado por UNESCO.
-				</div> -->
-				<div class="buttons">
-				  <a
-					class="btn-dark"
-					href="descuentos.html"
-					><span>Ingrese Aqui</span></a
+        <a class="header-slider left-arrow"></a>
+        <div id="header-slider" class="full-width" style="height: 600px;">
+            <ul class="slider" style="height: 600px;">
+                <li class="slide" style="background-image: url(assets/1.png); background-size: cover; height: 600px;">
+                    <div class="content">
+                        <div class="buttons">
+                            <a class="btn-dark" href="descuentos.html"><span>Ingrese Aqui</span></a
 				  >
 				</div>
 			  </div>
@@ -157,9 +180,7 @@
 			  "
 			>
 			  <div class="content">
-				<!-- <div class="text">
-				  <h2>Su tarjeta esencial de estudiante y estilo de vida</h2>
-				</div> -->
+		
 				<div class="buttons">
 				  <a
 					class="btn-dark"
@@ -176,14 +197,9 @@
 			  "
 			>
 			  <div class="content">
-				<!-- <div class="text">
-				  <h2>¿Por qué obtener una tarjeta ISIC?</h2>
-				  El carné ISIC, el único carné de estudiante aceptado internacionalmente
-				  internacionalmente aceptada, que puede servir de prueba
-				  más.
-				</div> -->
+				
 				<div class="buttons">
-				  <a class="btn-dark" href="obten_tu_tarjeta.html"
+				  <a class="btn-dark" href="activa_tu_carnet.html"
 					><span>Ingresa Aquí</span></a
 				  >
 				</div>
@@ -196,11 +212,7 @@
 			  "
 			>
 			  <div class="content">
-				<!-- <div class="text">
-				  <h2>Asociación con SheerID</h2>
-				  ISIC anuncia su asociación con SheerID para ampliar la verificación
-				  y proporcionar un mayor acceso a las marcas
-				</div> -->
+				
 				<div class="buttons">
 				  <a class="btn-dark" href="descuentos.html?providerId=254086"
 					><span>Ingresa Aquí</span></a
@@ -215,11 +227,7 @@
 			  "
 			>
 			  <div class="content">
-				<!-- <div class="text">
-				  <h2>Asociación con SheerID</h2>
-				  ISIC anuncia su asociación con SheerID para ampliar la verificación
-				  y proporcionar un mayor acceso a las marcas
-				</div> -->
+			
 				<div class="buttons">
 				  <a class="btn-dark" href="descuentos.html?providerId=254548"
 					><span>Ingresa Aquí</span></a
@@ -232,151 +240,142 @@
 		  <nav class="quick-slide">
 			<ul>
 			  <li><a href="#"></a></li>
-			  <li><a href="#"></a></li>
-			  <li><a href="#"></a></li>
-			  <li><a href="#"></a></li>
-			  <li><a href="#"></a></li>
-			</ul>
-		  </nav>
-		</div>
-		<a class="header-slider right-arrow"></a>
-	  </section>
+                <li>
+                    <a href="#"></a>
+                </li>
+                <li>
+                    <a href="#"></a>
+                </li>
+                <li>
+                    <a href="#"></a>
+                </li>
+                <li>
+                    <a href="#"></a>
+                </li>
+            </ul>
+            </nav>
+            </div>
+            <a class="header-slider right-arrow"></a>
+            </div>
+        </div>
+    </section>
 
     <div id="container">
-      <div class="content-wrapper">
-        <section class="main full-width">
-			<section>
-				<section class="main">
-					<div class="text">
-						<h3 class="subtitle">ISIC es la única credencial de identificación, avalada por la UNESCO, que prueba tu 
-							condición de estudiante en todo el mundo.</h3>
-						<p>Es una forma más de conectarte con estudiantes en todo el mundo, de vivir nuevas experiencias, y de 
-							aprovechar al máximo el momento y las ventajas de ser estudiante.
-						</p>
-					</div>
-					<div>
-						<h3 class="subtitle">Asociación ISIC</h3>
-						<p>Formamos parte de ISIC Association, una organización sin fines de lucro que tiene como único fin facilitar y promover el intercambio cultural entre jóvenes, y que como tal cuenta con el reconocimiento y 
-							respaldo de organizaciones internacionales tales como la UNESCO, el Consejo Europeo de Cultura y la Comunidad Andina de Naciones, así como también Ministerios de Cultura, de Educación, Turismo, y Secretarias
-							de la Juventud a lo largo del mundo.
-						</p>
-					</div>
-					<h3 class="subtitle">Entidades asociadas</h3>
-					<p>ISIC cuenta con el apoyo de ministerios de cultura, educación y turismo que han firmado acuerdos de colaboración con ISIC, beneficiando a los jóvenes y estudiantes en todo el mundo.
-						También recibe el apoyo de empresas que desean acceder al segmento joven.
-					</p>
-				</section>
-				<section class="sidebar-right">
-					<div class="card">
-						<div class="card-image">
-						  <img src="assets/desc_int.png" alt="desc">
-						</div>
-						<div class="card-content">
-						  <h3>Descuentos Internacionales</h3>
-						  <a href="https://www.isic.org/discounts/" class="btn">Ingrese aquí</a>
-						</div>
-					  </div>
-				</section>
-				
-				<div>
-					
-					<div class="nosotros-entidades-box">
-					<ul>
-						<li><img src="https://d2hihrr3db1s49.cloudfront.net/ddf7db5e-8760-4847-909f-7bb13445a830/images/entidades/fundacion-el-libro.png" alt="Fundación el libro"></li>
-						<li><img src="https://d2hihrr3db1s49.cloudfront.net/ddf7db5e-8760-4847-909f-7bb13445a830/images/entidades/unesco.avif" alt="UNESCO"></li>
-						<li><img src="https://d2hihrr3db1s49.cloudfront.net/ddf7db5e-8760-4847-909f-7bb13445a830/images/entidades/unwto.avif" alt="UNWTO"></li>
-						<li><img src="https://d2hihrr3db1s49.cloudfront.net/ddf7db5e-8760-4847-909f-7bb13445a830/images/entidades/comundidad-andina.avif" alt="Comunidad Andina de Naciones"></li>
-						<li><img src="https://d2hihrr3db1s49.cloudfront.net/ddf7db5e-8760-4847-909f-7bb13445a830/images/entidades/turismo-buenos-aires.avif" alt="Turismo Buenos Aires"></li>
-						<li><img src="https://d2hihrr3db1s49.cloudfront.net/ddf7db5e-8760-4847-909f-7bb13445a830/images/entidades/ba.png" alt="Ente de turismo de la Ciudad de Buenos Aires"></li>
-						<li><img src="https://d2hihrr3db1s49.cloudfront.net/ddf7db5e-8760-4847-909f-7bb13445a830/images/entidades/wyse.avif" alt="WYSE Travel"></li>
-						<li><img src="https://d2hihrr3db1s49.cloudfront.net/ddf7db5e-8760-4847-909f-7bb13445a830/images/entidades/wd.avif" alt="WD"></li>
-						<li><img src="https://d2hihrr3db1s49.cloudfront.net/ddf7db5e-8760-4847-909f-7bb13445a830/images/entidades/mastercard.avif" alt="MasterCard"></li>
-						<li><img src="https://d2hihrr3db1s49.cloudfront.net/ddf7db5e-8760-4847-909f-7bb13445a830/images/entidades/icbc.avif" alt="ICBC"></li>
-						<li><img src="https://d2hihrr3db1s49.cloudfront.net/ddf7db5e-8760-4847-909f-7bb13445a830/images/entidades/galicia.avif" alt="Banco Galicia"></li>
-						<li><img src="https://d2hihrr3db1s49.cloudfront.net/ddf7db5e-8760-4847-909f-7bb13445a830/images/entidades/worldready.avif" alt="Word Ready Academic English"></li>
-						<li><img src="https://d2hihrr3db1s49.cloudfront.net/ddf7db5e-8760-4847-909f-7bb13445a830/images/entidades/ef.avif" alt="EF: Education First"></li>
-						<li><img src="https://d2hihrr3db1s49.cloudfront.net/ddf7db5e-8760-4847-909f-7bb13445a830/images/entidades/study-portals.avif" alt="Study Portals"></li>
-						<li><img src="https://d2hihrr3db1s49.cloudfront.net/ddf7db5e-8760-4847-909f-7bb13445a830/images/entidades/financial-times.avif" alt="Financial times"></li>
-						<li><img src="https://d2hihrr3db1s49.cloudfront.net/ddf7db5e-8760-4847-909f-7bb13445a830/images/entidades/british-council.avif" alt="British Council"></li>
-					</ul>
-					</div>
-				</div>
-        </section>
+        <div class="content-wrapper">
+            <section class="main full-width">
+                <section>
+                    <section class="main">
+                        <div class="text">
+                            <h3 class="subtitle">ISIC es la única credencial de identificación, avalada por la UNESCO, que prueba tu condición de estudiante en todo el mundo.</h3>
+                            <p>Es una forma más de conectarte con estudiantes en todo el mundo, de vivir nuevas experiencias, y de aprovechar al máximo el momento y las ventajas de ser estudiante.
+                            </p>
+                        </div>
+                        <div>
+                            <h3 class="subtitle">Asociación ISIC</h3>
+                            <p>Formamos parte de ISIC Association, una organización sin fines de lucro que tiene como único fin facilitar y promover el intercambio cultural entre jóvenes, y que como tal cuenta con el reconocimiento y respaldo de organizaciones
+                                internacionales tales como la UNESCO, el Consejo Europeo de Cultura y la Comunidad Andina de Naciones, así como también Ministerios de Cultura, de Educación, Turismo, y Secretarias de la Juventud a lo largo del mundo.
+                            </p>
+                        </div>
+                        <h3 class="subtitle">Entidades asociadas</h3>
+                        <p>ISIC cuenta con el apoyo de ministerios de cultura, educación y turismo que han firmado acuerdos de colaboración con ISIC, beneficiando a los jóvenes y estudiantes en todo el mundo. También recibe el apoyo de empresas que desean
+                            acceder al segmento joven.
+                        </p>
+                    </section>
+                    <section class="sidebar-right">
+                        <div class="card">
+                            <div class="card-image">
+                                <img src="assets/desc_int.png" alt="desc">
+                            </div>
+                            <div class="card-content">
+                                <h3>Descuentos Internacionales</h3>
+                                <a href="descuentos.html" class="btn">Ingrese aquí</a>
+                            </div>
+                        </div>
+                    </section>
 
-        <div style="clear: both"></div>
-      </div>
+                    <div>
+
+                        <div class="nosotros-entidades-box">
+                            <ul>
+                                <li><img src="https://d2hihrr3db1s49.cloudfront.net/ddf7db5e-8760-4847-909f-7bb13445a830/images/entidades/fundacion-el-libro.png" alt="Fundación el libro"></li>
+                                <li><img src="https://d2hihrr3db1s49.cloudfront.net/ddf7db5e-8760-4847-909f-7bb13445a830/images/entidades/unesco.avif" alt="UNESCO"></li>
+                                <li><img src="https://d2hihrr3db1s49.cloudfront.net/ddf7db5e-8760-4847-909f-7bb13445a830/images/entidades/unwto.avif" alt="UNWTO"></li>
+                                <li><img src="https://d2hihrr3db1s49.cloudfront.net/ddf7db5e-8760-4847-909f-7bb13445a830/images/entidades/comundidad-andina.avif" alt="Comunidad Andina de Naciones"></li>
+                                <li><img src="https://d2hihrr3db1s49.cloudfront.net/ddf7db5e-8760-4847-909f-7bb13445a830/images/entidades/turismo-buenos-aires.avif" alt="Turismo Buenos Aires"></li>
+                                <li><img src="https://d2hihrr3db1s49.cloudfront.net/ddf7db5e-8760-4847-909f-7bb13445a830/images/entidades/ba.png" alt="Ente de turismo de la Ciudad de Buenos Aires"></li>
+                                <li><img src="https://d2hihrr3db1s49.cloudfront.net/ddf7db5e-8760-4847-909f-7bb13445a830/images/entidades/wyse.avif" alt="WYSE Travel"></li>
+                                <li><img src="https://d2hihrr3db1s49.cloudfront.net/ddf7db5e-8760-4847-909f-7bb13445a830/images/entidades/wd.avif" alt="WD"></li>
+                                <li><img src="https://d2hihrr3db1s49.cloudfront.net/ddf7db5e-8760-4847-909f-7bb13445a830/images/entidades/mastercard.avif" alt="MasterCard"></li>
+                                <li><img src="https://d2hihrr3db1s49.cloudfront.net/ddf7db5e-8760-4847-909f-7bb13445a830/images/entidades/icbc.avif" alt="ICBC"></li>
+                                <li><img src="https://d2hihrr3db1s49.cloudfront.net/ddf7db5e-8760-4847-909f-7bb13445a830/images/entidades/galicia.avif" alt="Banco Galicia"></li>
+                                <li><img src="https://d2hihrr3db1s49.cloudfront.net/ddf7db5e-8760-4847-909f-7bb13445a830/images/entidades/worldready.avif" alt="Word Ready Academic English"></li>
+                                <li><img src="https://d2hihrr3db1s49.cloudfront.net/ddf7db5e-8760-4847-909f-7bb13445a830/images/entidades/ef.avif" alt="EF: Education First"></li>
+                                <li><img src="https://d2hihrr3db1s49.cloudfront.net/ddf7db5e-8760-4847-909f-7bb13445a830/images/entidades/study-portals.avif" alt="Study Portals"></li>
+                                <li><img src="https://d2hihrr3db1s49.cloudfront.net/ddf7db5e-8760-4847-909f-7bb13445a830/images/entidades/financial-times.avif" alt="Financial times"></li>
+                                <li><img src="https://d2hihrr3db1s49.cloudfront.net/ddf7db5e-8760-4847-909f-7bb13445a830/images/entidades/british-council.avif" alt="British Council"></li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <div style="clear: both"></div>
+        </div>
     </div>
 
     <footer>
 
-		<div class="app-box">
-			<div class="full-width"
-				style="background: url('https://www.isic.org/wp-content/uploads/2022/09/190514_footer_image_300x360-4-1.png') no-repeat 680px -4px;">
-				<div class="super-header">Verificación instantánea de estudiantes</div>
-				<div class="content">
-					Descargue la aplicación global ISIC y obtenga un carné virtual ISIC para demostrar su condición de estudiante en un instante y disfrutar de descuentos sobre la marcha.
-					al instante y disfrutar de descuentos sobre la marcha.<br />
+        <div class="app-box">
+            <div class="full-width" style="background: url('https://www.isic.org/wp-content/uploads/2022/09/190514_footer_image_300x360-4-1.png') no-repeat 680px -4px;">
+                <div class="super-header">Verificación instantánea de estudiantes</div>
+                <div class="content">
+                    Descargue la aplicación global ISIC y obtenga un carné virtual ISIC para demostrar su condición de estudiante en un instante y disfrutar de descuentos sobre la marcha. al instante y disfrutar de descuentos sobre la marcha.<br />
 
-					<div class="wrapper">
-						<a class="app-store" href="https://apps.apple.com/us/app/isic/id886109982" target="_blank">
-							<img src="https://www.isic.org/wp-content/themes/isic2013/images/app_store.png" />
-						</a>
-						<a class="play-store" href="https://play.google.com/store/apps/details?id=nl.jool.isic"
-							target="_blank">
-							<img src="https://www.isic.org/wp-content/themes/isic2013/images/play_store.png" />
-						</a>
-						<a class="play-store"
-							href="https://appgallery.cloud.huawei.com/ag/n/app/C101900333?channelId=ISIC&id=e4f4cc74dce9475194918080d55ae7ad&s=8FC6567E9BFD655B4337E695BEB0C201F9A90ADE28EFA24277A616972A840DB7&detailType=0&v="
-							target="_blank">
-							<img src="https://www.isic.org/wp-content/uploads/2021/03/appgallery.png" height="45" />
-						</a>
-					</div>
-				</div>
-			</div>
-		</div>
+                    <div class="wrapper">
+                        <a class="app-store" href="https://apps.apple.com/us/app/isic/id886109982" target="_blank">
+                            <img src="https://www.isic.org/wp-content/themes/isic2013/images/app_store.png" />
+                        </a>
+                        <a class="play-store" href="https://play.google.com/store/apps/details?id=nl.jool.isic" target="_blank">
+                            <img src="https://www.isic.org/wp-content/themes/isic2013/images/play_store.png" />
+                        </a>
+                        <a class="play-store" href="https://appgallery.cloud.huawei.com/ag/n/app/C101900333?channelId=ISIC&id=e4f4cc74dce9475194918080d55ae7ad&s=8FC6567E9BFD655B4337E695BEB0C201F9A90ADE28EFA24277A616972A840DB7&detailType=0&v=" target="_blank">
+                            <img src="https://www.isic.org/wp-content/uploads/2021/03/appgallery.png" height="45" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-		<div class="bar">
-			<div class="full-width">
-				<div class="footer-nav">
-					<nav class="left">
-						<ul id="menu-footer-navigation" class="menu">
-							<li id="menu-item-3206"
-								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3206"><a
-									href="descuentos.html">Descuentos para estudiantes</a></li>
-							<li id="menu-item-299"
-								class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-74 current_page_item menu-item-299">
-								<a href="tarjetas.html" aria-current="page">¿Qué tarjeta le conviene?</a></li>
-							<li id="menu-item-360"
-								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-360"><a
-									href="obten_tu_tarjeta.html">Obtenga su tarjeta</a></li>
-							<li id="menu-item-20"
-								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20"><a
-									href="FAQs.html">FAQs</a></li>
-							<li id="menu-item-18"
-								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18"><a
-									href="sobre_nosotros.html">Sobre nosotros</a></li>
-							<li id="menu-item-212"
-								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-212"><a
-									href="contactenos.html">Contáctenos</a></li>
-						</ul>
-					</nav>
+        <div class="bar">
+            <div class="full-width">
+                <div class="footer-nav">
+                    <nav class="left">
+                        <ul id="menu-footer-navigation" class="menu">
+                            <li id="menu-item-3206" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3206"><a href="descuentos.html">Descuentos para estudiantes</a></li>
+                            <li id="menu-item-299" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-74 current_page_item menu-item-299">
+                                <a href="tarjetas.html" aria-current="page">¿Qué tarjeta le conviene?</a></li>
+                            <li id="menu-item-360" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-360"><a href="obten_tu_tarjeta.html">Obtenga su tarjeta</a></li>
+                            <li id="menu-item-20" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20"><a href="FAQs.html">FAQs</a></li>
+                            <li id="menu-item-18" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18"><a href="sobre_nosotros.html">Sobre nosotros</a></li>
+                            <li id="menu-item-212" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-212"><a href="contactenos.html">Contáctenos</a></li>
+                        </ul>
+                    </nav>
 
-					<nav class="right">
-						<ul>
-							<li>&copy; ISIC <span>todos los derechos reservados</span></li>
-							<li><a href="https://www.isic.org/privacy-policy/">política de privacidad</a></li>
-							<li><span>desarrollo: </span><a href="https://www.vhla.net" target="_blank"
-									title="Valhalla Cybernetics">Valhalla Cybernetics</a></li>
-						</ul>
-					</nav>
-				</div>
+                    <nav class="right">
+                        <ul>
+                            <li>&copy; ISIC <span>todos los derechos reservados</span></li>
+                            <li><a href="https://www.isic.org/privacy-policy/">política de privacidad</a></li>
+                            <li><span>desarrollo: </span><a href="https://www.vhla.net" target="_blank" title="Valhalla Cybernetics">Valhalla Cybernetics</a></li>
+                        </ul>
+                    </nav>
+                </div>
 
-				<div class="social-media">
-				</div>
-			</div>
-		</div>
-	</footer>
-	<script type="text/javascript" src="https://www.isic.org/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=4.9.2"></script>
-	<script type='text/javascript' src='https://www.isic.org/wp-includes/js/wp-embed.min.js?ver=5.4.2'></script>
-  </body>
+                <div class="social-media">
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script type="text/javascript" src="https://www.isic.org/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=4.9.2"></script>
+    <script type='text/javascript' src='https://www.isic.org/wp-includes/js/wp-embed.min.js?ver=5.4.2'></script>
+</body>
+
 </html>
