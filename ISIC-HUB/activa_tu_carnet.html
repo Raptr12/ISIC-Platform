@@ -73,6 +73,35 @@
             justify-content: center;
             background-color: #40b8b8;
         }
+        
+        .submenu {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            padding: 0;
+            z-index: 1;
+            white-space: nowrap;
+        }
+        
+        .menu-item:hover .submenu {
+            display: block;
+        }
+        
+        .submenu li {
+            list-style-type: none;
+        }
+        
+        .submenu li a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: #333;
+        }
+        
+        .submenu li a:hover {
+            background-color: #e0e0e0;
+        }
     </style>
 </head>
 
@@ -95,20 +124,27 @@
                         <a href="index.html">Inicio</a>
                     </li>
                     <li class="menu-item">
-                        <a href="tarjetas.html">Tipo de Carnets</a>
-                    </li>
-                    <li class="menu-item current-menu">
-                        <a href="descuentos.html">Beneficios</a>
+                        <a href="sobre_nosotros.html">Acerca de Nosotros</a>
                     </li>
                     <li class="menu-item">
-                        <a href="obten_tu_tarjeta.html">Obten tú Carnet</a>
+                        <a href="tarjetas.html">Tipos de Carnets</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="descuentos.html">Descuentos</a>
+                        <ul class="submenu">
+                            <li><a href="descuentos-int.html">Descuentos Internacionales</a></li>
+                            <li><a href="descuentos.html">Descuentos Locales</a></li>
+                        </ul>
+
                     </li>
                     <li class="menu-item">
                         <a href="activa_tu_carnet.html">Activa tú Carnet</a>
                     </li>
                     <li class="menu-item">
-                        <a href="sobre_nosotros.html">Sobre Nosotros</a>
+                        <a href="obten_tu_tarjeta.html">Obten tú Carnet</a>
                     </li>
+
+
                 </ul>
             </nav>
         </div>
@@ -118,14 +154,11 @@
         <div class="content-wrapper">
             <section class="main">
                 <article>
+                    <img src="assets/3.png" alt="Pasos">
+                    <img src="assets/4.png" alt="Pasos">
                     <h1 data-v-405da441="">Activa Tu Carnet</h1>
+
                     <p data-v-405da441="" class="info" style="text-align:justify">
-                        <p>&bull;&nbsp;El nuevo carné será&nbsp;<strong>DIGITAL&nbsp;</strong>y con los beneficios nacionales e internacionales que posee ISIC en el mundo.
-                            <br> &bull;&nbsp;Recuerde además que su carné forma parte de sus derechos adquiridos
-                            <br> como estudiante de nuestra casa de estudio.</p>
-                        <p><strong>Usted en estos momentos está ingresado en el sistema, pero requiere terminar el proceso de toma de foto para su activación. Favor de seguir las siguientes instrucciones que es muy rápido. Lo invitamos a que siga los siguientes
-                            pasos:</strong>
-                        </p>
                         <p><strong>PARA ACTIVAR EL CARNET DIGITAL:</strong></p>
                         <p>1. DESDE SU DISPOSITIVO ELECTRÓNICO: CELULAR, TABLETS O COMPUTADORA DEBE IR A LA PESTAÑA:</p>
                         <p>
@@ -133,9 +166,7 @@
                             <a href="https://play.google.com/store/apps/details?id=nl.jool.isic" target="_blank"><img src="https://www.isic.org/wp-content/themes/isic2013/images/play_store.png" style="border-style:solid; border-width:0px"></a>
                             PLAY STORE (para Android) o APP STORES (para iPhone)
                         </p>
-
                         <p>EN BUSQUEDA PONER EL NOMBRE "ISIC" Y DESCARGUE&nbsp;<img src="https://www.isic.org/wp-content/uploads/2022/01/isic-app-logo.jpg" style="height:59px; width:60px"></p>
-
                         <p>2. ENTRA A "REGISTRARSE" Y COLOCA LOS SIGUIENTES DATOS:</p>
                         <p><strong><span style="font-size:12pt">No de carnet y Nombre</span></strong></p>
                         <p>LUEGO INGRESA CORREO DE LA UNIVERSIDAD Y CREE UNA CONTRASEÑA</p>
@@ -156,118 +187,73 @@
                         <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" class="video_iframe" src="https://www.youtube.com/embed/QWJOfSZEiU8?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             allowfullscreen></iframe>
                     </div>
-
                 </article>
             </section>
             <section class="sidebar-right">
-                <ul>
-                    <li class="isic-card corner-20">
-                        <h3>Lista de control</h3>
+                <div class="border">
+                    <h3>Comience a utilizar su tarjeta ahora</h3>
+                    <p>
+                        En cuanto el ISIC confirme su condición de estudiante, su perfil ISIC se activa. Puede obtener grandes ventajas del ISIC en línea accediendo a tu cuenta ISIC.
+                    </p>
+                </div>
 
-                        <p><strong>¿Tienes todo lo que necesitas?</strong></p>
-                        <ul>
-                            <li>
-                                <span style="line-height: 13px">Su foto digital en formato jpg o jpeg con un fondo blanco o
-                    azul.</span
-                  >
-                </li>
-                <li>
-                    Una copia escaneada de su justificante de estudiante a tiempo completo
-                    que muestre claramente la fecha de expedición en formato jpeg, jpg o pdf
-                    (por ejemplo, su carné universitario, una carta de su escuela
-                    carta oficial de matriculación).
-                </li>
-                <li>
-                    Una copia escaneada de su documento de identidad en formato jpg, jpeg o pdf
-                    (por ejemplo, su pasaporte, documento nacional de identidad o
-                    carné de conducir).
-                </li>
-                <li>Su forma de pago (PayPal, tarjeta de crédito).</li>
-              </ul>
-            </li>
-            <li class="border">
-              <h3>Comience a utilizar su tarjeta ahora</h3>
 
-              <p>
-                En cuanto el ISIC confirme su condición de estudiante, su perfil ISIC
-                se activa. Puede obtener grandes ventajas del ISIC en línea
-                accediendo a tu cuenta ISIC.
-              </p>
-            </li>
-          </ul>
-          
-        </section>
-        <div style="clear: both"></div>
-      </div>
+            </section>
+            <div style="clear: both"></div>
+        </div>
     </div>
 
     <footer>
 
-		<div class="app-box">
-			<div class="full-width"
-				style="background: url('https://www.isic.org/wp-content/uploads/2022/09/190514_footer_image_300x360-4-1.png') no-repeat 680px -4px;">
-				<div class="super-header">Verificación instantánea de estudiantes</div>
-				<div class="content">
-					Descargue la aplicación global ISIC y obtenga un carné virtual ISIC para demostrar su condición de estudiante en un instante y disfrutar de descuentos sobre la marcha.
-					al instante y disfrutar de descuentos sobre la marcha.<br />
+        <div class="app-box">
+            <div class="full-width" style="background: url('https://www.isic.org/wp-content/uploads/2022/09/190514_footer_image_300x360-4-1.png') no-repeat 680px -4px;">
+                <div class="super-header">Verificación instantánea de estudiantes</div>
+                <div class="content">
+                    Descargue la aplicación global ISIC y obtenga un carné virtual ISIC para demostrar su condición de estudiante en un instante y disfrutar de descuentos sobre la marcha. al instante y disfrutar de descuentos sobre la marcha.<br />
 
-					<div class="wrapper">
-						<a class="app-store" href="https://apps.apple.com/us/app/isic/id886109982" target="_blank">
-							<img src="https://www.isic.org/wp-content/themes/isic2013/images/app_store.png" />
-						</a>
-						<a class="play-store" href="https://play.google.com/store/apps/details?id=nl.jool.isic"
-							target="_blank">
-							<img src="https://www.isic.org/wp-content/themes/isic2013/images/play_store.png" />
-						</a>
-						<a class="play-store"
-							href="https://appgallery.cloud.huawei.com/ag/n/app/C101900333?channelId=ISIC&id=e4f4cc74dce9475194918080d55ae7ad&s=8FC6567E9BFD655B4337E695BEB0C201F9A90ADE28EFA24277A616972A840DB7&detailType=0&v="
-							target="_blank">
-							<img src="https://www.isic.org/wp-content/uploads/2021/03/appgallery.png" height="45" />
-						</a>
-					</div>
-				</div>
-			</div>
-		</div>
+                    <div class="wrapper">
+                        <a class="app-store" href="https://apps.apple.com/us/app/isic/id886109982" target="_blank">
+                            <img src="https://www.isic.org/wp-content/themes/isic2013/images/app_store.png" />
+                        </a>
+                        <a class="play-store" href="https://play.google.com/store/apps/details?id=nl.jool.isic" target="_blank">
+                            <img src="https://www.isic.org/wp-content/themes/isic2013/images/play_store.png" />
+                        </a>
+                        <a class="play-store" href="https://appgallery.cloud.huawei.com/ag/n/app/C101900333?channelId=ISIC&id=e4f4cc74dce9475194918080d55ae7ad&s=8FC6567E9BFD655B4337E695BEB0C201F9A90ADE28EFA24277A616972A840DB7&detailType=0&v=" target="_blank">
+                            <img src="https://www.isic.org/wp-content/uploads/2021/03/appgallery.png" height="45" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-		<div class="bar">
-			<div class="full-width">
-				<div class="footer-nav">
-					<nav class="left">
-						<ul id="menu-footer-navigation" class="menu">
-							<li id="menu-item-3206"
-								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3206"><a
-									href="descuentos.html">Descuentos para estudiantes</a></li>
-							<li id="menu-item-299"
-								class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-74 current_page_item menu-item-299">
-								<a href="tarjetas.html" aria-current="page">¿Qué tarjeta le conviene?</a></li>
-							<li id="menu-item-360"
-								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-360"><a
-									href="obten_tu_tarjeta.html">Obtenga su tarjeta</a></li>
-							<li id="menu-item-20"
-								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20"><a
-									href="FAQs.html">FAQs</a></li>
-							<li id="menu-item-18"
-								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18"><a
-									href="sobre_nosotros.html">Sobre nosotros</a></li>
-							<li id="menu-item-212"
-								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-212"><a
-									href="contactenos.html">Contáctenos</a></li>
-						</ul>
-					</nav>
+        <div class="bar">
+            <div class="full-width">
+                <div class="footer-nav">
+                    <nav class="left">
+                        <ul id="menu-footer-navigation" class="menu">
+                            <li id="menu-item-3206" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3206"><a href="descuentos.html">Descuentos para estudiantes</a></li>
+                            <li id="menu-item-299" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-74 current_page_item menu-item-299">
+                                <a href="tarjetas.html" aria-current="page">¿Qué tarjeta le conviene?</a></li>
+                            <li id="menu-item-360" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-360"><a href="obten_tu_tarjeta.html">Obtenga su tarjeta</a></li>
+                            <li id="menu-item-20" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20"><a href="FAQs.html">FAQs</a></li>
+                            <li id="menu-item-18" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18"><a href="sobre_nosotros.html">Sobre nosotros</a></li>
+                            <li id="menu-item-212" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-212"><a href="contactenos.html">Contáctenos</a></li>
+                        </ul>
+                    </nav>
 
-					<nav class="right">
-						<ul>
-							<li>&copy; ISIC <span>todos los derechos reservados</span></li>
+                    <nav class="right">
+                        <ul>
+                            <li>&copy; ISIC <span>todos los derechos reservados</span></li>
                             <li><a href="https://www.isic.org/privacy-policy/">política de privacidad</a></li>
                             <li><span>desarrollo: </span><a href="https://www.vhla.net" target="_blank" title="Valhalla Cybernetics">Valhalla Cybernetics</a></li>
                         </ul>
-                        </nav>
-        </div>
+                    </nav>
+                </div>
 
-        <div class="social-media">
+                <div class="social-media">
+                </div>
+            </div>
         </div>
-    </div>
-    </div>
     </footer>
     <script type="text/javascript" src="https://www.isic.org/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=4.9.2"></script>
     <script type='text/javascript' src='https://www.isic.org/wp-includes/js/wp-embed.min.js?ver=5.4.2'></script>

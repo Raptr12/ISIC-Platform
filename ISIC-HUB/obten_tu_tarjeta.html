@@ -97,10 +97,12 @@
         
         .button-container {
             display: flex;
-            justify-content: flex-start; /* Alinear los botones a la izquierda */
-            gap: 10px; /* Espacio entre los botones */
+            justify-content: flex-start;
+            /* Alinear los botones a la izquierda */
+            gap: 10px;
+            /* Espacio entre los botones */
         }
-
+        
         button {
             background-color: #40b8b8;
             color: white;
@@ -114,7 +116,7 @@
         button:hover {
             background-color: #359999;
         }
-
+        
         .second {
             background-color: #25d366;
             color: white;
@@ -123,10 +125,39 @@
             border-radius: 5px;
             cursor: pointer;
             transition: background-color 0.3s ease-in-out;
-            
         }
+        
         .second:hover {
             background-color: #65df91;
+        }
+        
+        .submenu {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            padding: 0;
+            z-index: 1;
+            white-space: nowrap;
+        }
+        
+        .menu-item:hover .submenu {
+            display: block;
+        }
+        
+        .submenu li {
+            list-style-type: none;
+        }
+        
+        .submenu li a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: #333;
+        }
+        
+        .submenu li a:hover {
+            background-color: #e0e0e0;
         }
     </style>
 </head>
@@ -150,20 +181,27 @@
                         <a href="index.html">Inicio</a>
                     </li>
                     <li class="menu-item">
-                        <a href="tarjetas.html">Tipo de Carnets</a>
-                    </li>
-                    <li class="menu-item current-menu">
-                        <a href="descuentos.html">Beneficios</a>
+                        <a href="sobre_nosotros.html">Acerca de Nosotros</a>
                     </li>
                     <li class="menu-item">
-                        <a href="obten_tu_tarjeta.html">Obten tú Carnet</a>
+                        <a href="tarjetas.html">Tipos de Carnets</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="descuentos.html">Descuentos</a>
+                        <ul class="submenu">
+                            <li><a href="descuentos-int.html">Descuentos Internacionales</a></li>
+                            <li><a href="descuentos.html">Descuentos Locales</a></li>
+                        </ul>
+
                     </li>
                     <li class="menu-item">
                         <a href="activa_tu_carnet.html">Activa tú Carnet</a>
                     </li>
                     <li class="menu-item">
-                        <a href="sobre_nosotros.html">Sobre Nosotros</a>
+                        <a href="obten_tu_tarjeta.html">Obten tú Carnet</a>
                     </li>
+
+
                 </ul>
             </nav>
         </div>
@@ -230,7 +268,7 @@
 
                                                     <div class="button-container">
                                                         <button type="submit">Enviar mensaje</button>
-                                                        <a href="https://wa.me/50766559985" target={'_blank'}><img src="assets/WhatsAppButtonGreenSmall.png" alt="Chat on WhatsApp" style="width: 190px"/></a>
+                                                        <a href="https://wa.me/50766559985" target={ '_blank'}><img src="assets/WhatsAppButtonGreenSmall.png" alt="Chat on WhatsApp" style="width: 190px" /></a>
                                                     </div>
                                                 </form>
                                             </div>

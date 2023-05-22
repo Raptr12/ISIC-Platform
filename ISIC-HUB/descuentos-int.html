@@ -2,111 +2,45 @@
 <html lang="en">
 
 <head>
-    <title>Quiero mi carnet - ISIC</title>
+    <title>Discounts - ISIC</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700&amp;subset=latin-ext' rel='stylesheet' type='text/css'>
     <link href="https://www.isic.org/wp-content/themes/isic2013/css/style.css?v=3.1" type="text/css" rel="stylesheet" />
-    <style>
-        .card {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-            border-bottom: 1px solid #ccc;
-            padding-bottom: 20px;
-        }
-        
-        .card-3 {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-        
-        .card-image {
-            flex: 0 0 auto;
-            margin-right: 100px;
-        }
-        
-        .card-image img {
-            max-width: 150px;
-            height: auto;
-        }
-        
-        .card-content {
-            flex: 1 1 auto;
-        }
-        
-        .card-title {
-            display: flex;
-            /* Agregamos display flex para alinear elementos */
-            justify-content: space-between;
-            font-size: 18px;
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-        
-        .card-button {
-            display: inline-block;
-            padding: 5px 10px;
-            background-color: #81d0d0;
-            color: #333;
-            text-decoration: none;
-            border-radius: 15px;
-        }
-        
-        .card-button:hover {
-            background-color: #a5e4e4;
-            /* Cambiamos el color en el hover a un tono más claro */
-        }
-        
-        .card-description {
-            margin-top: 5px;
-            margin-bottom: 10px;
-        }
-        
-        .card-bullets {
-            list-style-type: disc;
-            padding-left: 20px;
-            margin: 0;
-        }
-        
-        .card-bullets li {
-            margin-bottom: 5px;
-        }
-        
-        .sub-title {
-            font-weight: bold;
-        }
-        
-        .submenu {
-            display: none;
-            position: absolute;
-            background-color: #f9f9f9;
-            border: 1px solid #ccc;
-            padding: 0;
-            z-index: 1;
-            white-space: nowrap;
-        }
-        
-        .menu-item:hover .submenu {
-            display: block;
-        }
-        
-        .submenu li {
-            list-style-type: none;
-        }
-        
-        .submenu li a {
-            display: block;
-            padding: 10px;
-            text-decoration: none;
-            color: #333;
-        }
-        
-        .submenu li a:hover {
-            background-color: #e0e0e0;
-        }
-    </style>
+    <script type="text/javascript" src="https://www.isic.org/wp-content/themes/isic2013/js/vendor/jquery.min.js"></script>
+    <script type="text/javascript" src="https://www.isic.org/wp-content/themes/isic2013/js/buttons.js?v=2"></script>
+    <script type="text/javascript" src="https://www.isic.org/wp-content/themes/isic2013/js/rotator.js?v=2"></script>
+    <script type="text/javascript" src="https://www.isic.org/wp-content/themes/isic2013/js/page.js?v=2"></script>
 </head>
+<style>
+    .submenu {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        border: 1px solid #ccc;
+        padding: 0;
+        z-index: 1;
+        white-space: nowrap;
+    }
+    
+    .menu-item:hover .submenu {
+        display: block;
+    }
+    
+    .submenu li {
+        list-style-type: none;
+    }
+    
+    .submenu li a {
+        display: block;
+        padding: 10px;
+        text-decoration: none;
+        color: #333;
+    }
+    
+    .submenu li a:hover {
+        background-color: #e0e0e0;
+    }
+</style>
 
 <body>
     <header>
@@ -152,52 +86,91 @@
             </nav>
         </div>
     </header>
-    <div id="container">
-        <div class="content-wrapper">
-            <div class="card">
-                <div class="image" style="margin-right: 50px">
-                    <img src="assets/ISIC_card.png">
-                </div>
-                <div class="card-content">
-                    <div class="card-title"><span>Carnet ISIC Virtual </span><a href="#" class="card-button" style="margin-left: auto;">Pídala</a></div>
-                    <div class="card-description">El único carné de estudiante reconocido en todo el mundo para estudiantes que cursan actualmente estudios a tiempo completo en institutos, colegios o universidades.</div>
-                    <p class="sub-title">Requisitos para su expedición:</p>
-                    <ul class="card-bullets">
-                        <li>Fotografía tipo pasaporte</li>
-                        <li>Confirmación de la condición de estudiante (menos de 2 meses de antigüedad)</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="card">
-                <div class="image" style="margin-right: 50px">
-                    <img src="assets/ITIC_card.png">
-                </div>
-                <div class="card-content">
-                    <div class="card-title"><span>Carnet ITIC Virtual </span><a href="#" class="card-button" style="margin-left: auto;">Pídala</a></div>
-                    <div class="card-description">El único carné de profesor reconocido mundialmente para maestros y profesores a tiempo completo.</div>
-                    <p class="sub-title">Requisitos para su expedición:</p>
-                    <ul class="card-bullets">
-                        <li>Fotografía tipo pasaporte</li>
-                        <li>Confirmación de la condición de profesor (menos de 2 meses de antigüedad)</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="card-3">
-                <div class="image" style="margin-right: 50px">
-                    <img src="assets/IYTC_card.png">
-                </div>
-                <div class="card-content">
-                    <div class="card-title"><span>Carnet IYTC Virtual </span> <a href="#" class="card-button" style="margin-left: auto;">Pídala</a></div>
-                    <div class="card-description">La única tarjeta mundialmente reconocida para jóvenes menores de 31 años, aceptada en más de 130 países.</div>
-                    <p class="sub-title">Requisitos para su expedición:</p>
-                    <ul class="card-bullets">
-                        <li>Fotografía tipo pasaporte</li>
-                        <li>Edad inferior a 31 años</li>
-                    </ul>
-                </div>
+    <script>
+        window.messages = {
+            "common": {
+                "button": {
+                    "confirm": "Confirmar",
+                    "cancel": "Cancelar"
+                },
+                "cardTypes": {
+                    "isic": "ISIC",
+                    "itic": "ITIC",
+                    "iytc": "IYTC"
+                },
+                "allCategories": "Todas las categorías",
+            },
+            "filter": {
+                "labels": {
+                    "filterSelect": "Filtro",
+                    "searchFor": "Buscar por ...",
+                    "cityOrCountry": "Ciudad o país",
+                    "in": "en"
+                },
+                "legends": {
+                    "sort": "Ordenar",
+                    "discounts": "Descuentos",
+                    "cards": "Tarjetas"
+                },
+                "discounts": {
+                    "online": "Descuentos online",
+                    "inStore": "Descuentos presenciales"
+                },
+                "sort": {
+                    "recommended": "Recomendados",
+                    "newest": "Nuevos",
+                    "alphabet": "Alfabeticamente",
+                    "distance": "Distancia"
+                },
+                "display": {
+                    "list": "Lista",
+                    "map": "Mapa"
+                }
+            },
+            "provider": {
+                "detail": {
+                    "discounts": "Descuentos",
+                    "about": "Acerca",
+                    "gallery": "Galería",
+                    "location": "Ubicación en el mapa",
+                    "suggestion": "Tal vez te interesen alguna de estas ofertas",
+                    "tags": "Tags",
+                    "noData": "<b>Lo sentimos! Este descuento ya no esta disponible.</b><br /><br />Puedes hacer click en las categorías de arriba o usar el buscador para encontrar descuentos activos."
+                },
+                "map": {
+                    "legend": "Índice de mapa"
+                },
+                "list": {
+                    "noData": "<b>Lo sentimos! No encontramos ningún resultado a tu búsqueda.</b><br /><br />Intenta nuevamente con las siguientes sugerencias:<br /><ul><li>Revisa tu ortografía</li><li>Trata de buscar por marca o con diferentes palabras clave</li><li>Modifica el filtro o cambia de categoría</li></ul>Si modifica la busqueda, volveremos a mirar y encontraremos el descuento adecuado para usted."
+                }
+            },
+            "discount": {
+                "fields": {
+                    "validFor": "Válido hasta:"
+                },
+                "buttons": {
+                    "getDiscountOnline": "Obtener descuento online"
+                }
+            }
+        }
+    </script>
+
+
+    <script src="https://widgets.isic.org/discounts/discounts-widget.min.js"></script>
+    <discounts-widget access-token="e81a075e-efd1-4fcf-a95c-ed1735101031" application-name="isic-org-discounts-widget" locale="es">
+        <div style="text-align: center; margin-left: 20px;margin-right: 20px;">
+            <div style="display: inline-block; text-align: left; font-family: Roboto,sans-serif;">
+                <h1 style="color: #40b8b8;">Your browser is too old</h1>
+                <p style="color: #346562; font-size: 14px;">
+                    We're sorry, but your web browser is outdated and doesn't support latest technologies to display our discounts.
+                    <br/><br/> To enjoy our website, please download the latest version of <a href="https://www.google.com/intl/en/chrome/">Google Chrome</a>,
+                    <a href="https://www.mozilla.org/en-US/firefox/new/"> Mozilla Firefox</a> or <a href="https://www.microsoft.com/enUS/edge"> Microsoft Edge</a>.
+                </p>
             </div>
         </div>
-    </div>
+    </discounts-widget>
+    <div style="margin-bottom: 20px;"></div>
+
     <footer>
 
         <div class="app-box">

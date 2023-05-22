@@ -7,6 +7,36 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700&amp;subset=latin-ext' rel='stylesheet' type='text/css'>
     <link href="https://www.isic.org/wp-content/themes/isic2013/css/style.css?v=3.1" type="text/css" rel="stylesheet" />
 </head>
+<style>
+    .submenu {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        border: 1px solid #ccc;
+        padding: 0;
+        z-index: 1;
+        white-space: nowrap;
+    }
+    
+    .menu-item:hover .submenu {
+        display: block;
+    }
+    
+    .submenu li {
+        list-style-type: none;
+    }
+    
+    .submenu li a {
+        display: block;
+        padding: 10px;
+        text-decoration: none;
+        color: #333;
+    }
+    
+    .submenu li a:hover {
+        background-color: #e0e0e0;
+    }
+</style>
 
 <body>
     <header>
@@ -20,33 +50,40 @@
             </div>
         </div>
         <div id="top-navigation">
-         <a href="index.html" class="toggle-menu">Menu</a>
-         <nav class="full-width" style="text-align: center;">
-             <ul id="menu-main-navigation" class="menu">
-                 <li class="menu-item">
-                     <a href="index.html">Inicio</a>
-                 </li>
-                 <li class="menu-item">
-                     <a href="tarjetas.html">Tipo de Carnets</a>
-                 </li>
-                 <li class="menu-item current-menu">
-                     <a href="descuentos.html">Beneficios</a>
-                 </li>
-                 <li class="menu-item">
-                     <a href="obten_tu_tarjeta.html">Obten tú Carnet</a>
-                 </li>
-                 <li class="menu-item">
-                     <a href="activa_tu_carnet.html">Activa tú Carnet</a>
-                 </li>
-                 <li class="menu-item">
-                     <a href="sobre_nosotros.html">Sobre Nosotros</a>
-                 </li>
-             </ul>
-         </nav>
-     </div>
-      </header>
-      <div id="container">
-         <div class="content-wrapper">
+            <a href="index.html" class="toggle-menu">Menu</a>
+            <nav class="full-width" style="text-align: center;">
+                <ul id="menu-main-navigation" class="menu">
+                    <li class="menu-item">
+                        <a href="index.html">Inicio</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="sobre_nosotros.html">Acerca de Nosotros</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="tarjetas.html">Tipos de Carnets</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="descuentos.html">Descuentos</a>
+                        <ul class="submenu">
+                            <li><a href="descuentos-int.html">Descuentos Internacionales</a></li>
+                            <li><a href="descuentos.html">Descuentos Locales</a></li>
+                        </ul>
+
+                    </li>
+                    <li class="menu-item">
+                        <a href="activa_tu_carnet.html">Activa tú Carnet</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="obten_tu_tarjeta.html">Obten tú Carnet</a>
+                    </li>
+
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div id="container">
+        <div class="content-wrapper">
             <section class="main">
                 <article>
                     <h2>Sobre nosotros</h2>

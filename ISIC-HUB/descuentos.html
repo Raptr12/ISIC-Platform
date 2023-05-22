@@ -1,208 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Discounts - ISIC</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href='https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700&amp;subset=latin-ext' rel='stylesheet' type='text/css'>
-        <link href="https://www.isic.org/wp-content/themes/isic2013/css/style.css?v=3.1" type="text/css" rel="stylesheet" />
-        <script type="text/javascript" src="https://www.isic.org/wp-content/themes/isic2013/js/vendor/jquery.min.js"></script>
-        <script type="text/javascript" src="https://www.isic.org/wp-content/themes/isic2013/js/buttons.js?v=2"></script>
-        <script type="text/javascript" src="https://www.isic.org/wp-content/themes/isic2013/js/rotator.js?v=2"></script>
-        <script type="text/javascript" src="https://www.isic.org/wp-content/themes/isic2013/js/page.js?v=2"></script>
-    </head>
-    <body>
-        <header>
-            <div class="top full-width">
-                <div class="logo-wrapper">
-                    <div id="logo" style="width:370px;height:114px;">
-                        <a href="index.html">
-                            <img src="https://s3-eu-west-1.amazonaws.com/media.isic.org/isicwp/uploads/2019/05/ISIC_web_logo-2.jpg" alt="ISIC" />
+
+<head>
+    <title>Discounts - ISIC</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700&amp;subset=latin-ext' rel='stylesheet' type='text/css'>
+    <link href="https://www.isic.org/wp-content/themes/isic2013/css/style.css?v=3.1" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="https://www.isic.org/wp-content/themes/isic2013/js/vendor/jquery.min.js"></script>
+    <script type="text/javascript" src="https://www.isic.org/wp-content/themes/isic2013/js/buttons.js?v=2"></script>
+    <script type="text/javascript" src="https://www.isic.org/wp-content/themes/isic2013/js/rotator.js?v=2"></script>
+    <script type="text/javascript" src="https://www.isic.org/wp-content/themes/isic2013/js/page.js?v=2"></script>
+</head>
+<style>
+    .submenu {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        border: 1px solid #ccc;
+        padding: 0;
+        z-index: 1;
+        white-space: nowrap;
+    }
+    
+    .menu-item:hover .submenu {
+        display: block;
+    }
+    
+    .submenu li {
+        list-style-type: none;
+    }
+    
+    .submenu li a {
+        display: block;
+        padding: 10px;
+        text-decoration: none;
+        color: #333;
+    }
+    
+    .submenu li a:hover {
+        background-color: #e0e0e0;
+    }
+</style>
+
+<body>
+    <header>
+        <div class="top full-width">
+            <div class="logo-wrapper">
+                <div id="logo" style="width:370px;height:114px;">
+                    <a href="index.html">
+                        <img src="https://s3-eu-west-1.amazonaws.com/media.isic.org/isicwp/uploads/2019/05/ISIC_web_logo-2.jpg" alt="ISIC" />
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="top-navigation">
+            <a href="index.html" class="toggle-menu">Menu</a>
+            <nav class="full-width" style="text-align: center;">
+                <ul id="menu-main-navigation" class="menu">
+                    <li class="menu-item">
+                        <a href="index.html">Inicio</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="sobre_nosotros.html">Acerca de Nosotros</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="tarjetas.html">Tipos de Carnets</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="descuentos.html">Descuentos</a>
+                        <ul class="submenu">
+                            <li><a href="descuentos-int.html">Descuentos Internacionales</a></li>
+                            <li><a href="descuentos.html">Descuentos Locales</a></li>
+                        </ul>
+
+                    </li>
+                    <li class="menu-item">
+                        <a href="activa_tu_carnet.html">Activa tú Carnet</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="obten_tu_tarjeta.html">Obten tú Carnet</a>
+                    </li>
+
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <script>
+        window.messages = {
+            "common": {
+                "button": {
+                    "confirm": "Confirmar",
+                    "cancel": "Cancelar"
+                },
+                "cardTypes": {
+                    "isic": "ISIC",
+                    "itic": "ITIC",
+                    "iytc": "IYTC"
+                },
+                "allCategories": "Todas las categorías",
+            },
+            "filter": {
+                "labels": {
+                    "filterSelect": "Filtro",
+                    "searchFor": "Buscar por ...",
+                    "cityOrCountry": "Ciudad o país",
+                    "in": "en"
+                },
+                "legends": {
+                    "sort": "Ordenar",
+                    "discounts": "Descuentos",
+                    "cards": "Tarjetas"
+                },
+                "discounts": {
+                    "online": "Descuentos online",
+                    "inStore": "Descuentos presenciales"
+                },
+                "sort": {
+                    "recommended": "Recomendados",
+                    "newest": "Nuevos",
+                    "alphabet": "Alfabeticamente",
+                    "distance": "Distancia"
+                },
+                "display": {
+                    "list": "Lista",
+                    "map": "Mapa"
+                }
+            },
+            "provider": {
+                "detail": {
+                    "discounts": "Descuentos",
+                    "about": "Acerca",
+                    "gallery": "Galería",
+                    "location": "Ubicación en el mapa",
+                    "suggestion": "Tal vez te interesen alguna de estas ofertas",
+                    "tags": "Tags",
+                    "noData": "<b>Lo sentimos! Este descuento ya no esta disponible.</b><br /><br />Puedes hacer click en las categorías de arriba o usar el buscador para encontrar descuentos activos."
+                },
+                "map": {
+                    "legend": "Índice de mapa"
+                },
+                "list": {
+                    "noData": "<b>Lo sentimos! No encontramos ningún resultado a tu búsqueda.</b><br /><br />Intenta nuevamente con las siguientes sugerencias:<br /><ul><li>Revisa tu ortografía</li><li>Trata de buscar por marca o con diferentes palabras clave</li><li>Modifica el filtro o cambia de categoría</li></ul>Si modifica la busqueda, volveremos a mirar y encontraremos el descuento adecuado para usted."
+                }
+            },
+            "discount": {
+                "fields": {
+                    "validFor": "Válido hasta:"
+                },
+                "buttons": {
+                    "getDiscountOnline": "Obtener descuento online"
+                }
+            }
+        }
+    </script>
+
+
+    <script src="https://widgets.isic.org/discounts/discounts-widget.min.js"></script>
+    <discounts-widget access-token="e81a075e-efd1-4fcf-a95c-ed1735101031" application-name="isic-org-discounts-widget" locale="es" default-location="Panama">
+        <div style="text-align: center; margin-left: 20px;margin-right: 20px;">
+            <div style="display: inline-block; text-align: left; font-family: Roboto,sans-serif;">
+                <h1 style="color: #40b8b8;">Your browser is too old</h1>
+                <p style="color: #346562; font-size: 14px;">
+                    We're sorry, but your web browser is outdated and doesn't support latest technologies to display our discounts.
+                    <br/><br/> To enjoy our website, please download the latest version of <a href="https://www.google.com/intl/en/chrome/">Google Chrome</a>,
+                    <a href="https://www.mozilla.org/en-US/firefox/new/"> Mozilla Firefox</a> or <a href="https://www.microsoft.com/enUS/edge"> Microsoft Edge</a>.
+                </p>
+            </div>
+        </div>
+    </discounts-widget>
+    <div style="margin-bottom: 20px;"></div>
+
+    <footer>
+
+        <div class="app-box">
+            <div class="full-width" style="background: url('https://www.isic.org/wp-content/uploads/2022/09/190514_footer_image_300x360-4-1.png') no-repeat 680px -4px;">
+                <div class="super-header">Verificación instantánea de estudiantes</div>
+                <div class="content">
+                    Descargue la aplicación global ISIC y obtenga un carné virtual ISIC para demostrar su condición de estudiante en un instante y disfrutar de descuentos sobre la marcha. al instante y disfrutar de descuentos sobre la marcha.<br />
+
+                    <div class="wrapper">
+                        <a class="app-store" href="https://apps.apple.com/us/app/isic/id886109982" target="_blank">
+                            <img src="https://www.isic.org/wp-content/themes/isic2013/images/app_store.png" />
+                        </a>
+                        <a class="play-store" href="https://play.google.com/store/apps/details?id=nl.jool.isic" target="_blank">
+                            <img src="https://www.isic.org/wp-content/themes/isic2013/images/play_store.png" />
+                        </a>
+                        <a class="play-store" href="https://appgallery.cloud.huawei.com/ag/n/app/C101900333?channelId=ISIC&id=e4f4cc74dce9475194918080d55ae7ad&s=8FC6567E9BFD655B4337E695BEB0C201F9A90ADE28EFA24277A616972A840DB7&detailType=0&v=" target="_blank">
+                            <img src="https://www.isic.org/wp-content/uploads/2021/03/appgallery.png" height="45" />
                         </a>
                     </div>
                 </div>
             </div>
-            <div id="top-navigation">
-                <a href="index.html" class="toggle-menu">Menu</a>
-                <nav class="full-width" style="text-align: center;">
-                    <ul id="menu-main-navigation" class="menu">
-                        <li class="menu-item">
-                            <a href="index.html">Inicio</a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="tarjetas.html">Tipo de Carnets</a>
-                        </li>
-                        <li class="menu-item current-menu">
-                            <a href="descuentos.html">Beneficios</a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="obten_tu_tarjeta.html">Obten tú Carnet</a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="activa_tu_carnet.html">Activa tú Carnet</a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="sobre_nosotros.html">Sobre Nosotros</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
-        <script>
-            window.messages = {
-                "common": {
-                    "button": {
-                        "confirm": "Confirmar",
-                        "cancel": "Cancelar"
-                    },
-                    "cardTypes": {
-                        "isic": "ISIC",
-                        "itic": "ITIC",
-                        "iytc": "IYTC"
-                    },
-                    "allCategories": "Todas las categorías",
-                },
-                "filter": {
-                    "labels": {
-                        "filterSelect": "Filtro",
-                        "searchFor": "Buscar por ...",
-                        "cityOrCountry": "Ciudad o país",
-                        "in": "en"
-                    },
-                    "legends": {
-                        "sort": "Ordenar",
-                        "discounts": "Descuentos",
-                        "cards": "Tarjetas"
-                    },
-                    "discounts": {
-                        "online": "Descuentos online",
-                        "inStore": "Descuentos presenciales"
-                    },
-                    "sort": {
-                        "recommended": "Recomendados",
-                        "newest": "Nuevos",
-                        "alphabet": "Alfabeticamente",
-                        "distance": "Distancia"
-                    },
-                    "display": {
-                        "list": "Lista",
-                        "map": "Mapa"
-                    }
-                },
-                "provider": {
-                    "detail": {
-                        "discounts": "Descuentos",
-                        "about": "Acerca",
-                        "gallery": "Galería",
-                        "location": "Ubicación en el mapa",
-                        "suggestion": "Tal vez te interesen alguna de estas ofertas",
-                        "tags": "Tags",
-                        "noData": "<b>Lo sentimos! Este descuento ya no esta disponible.</b><br /><br />Puedes hacer click en las categorías de arriba o usar el buscador para encontrar descuentos activos."
-                    },
-                    "map": {
-                        "legend": "Índice de mapa"
-                    },
-                    "list": {
-                        "noData": "<b>Lo sentimos! No encontramos ningún resultado a tu búsqueda.</b><br /><br />Intenta nuevamente con las siguientes sugerencias:<br /><ul><li>Revisa tu ortografía</li><li>Trata de buscar por marca o con diferentes palabras clave</li><li>Modifica el filtro o cambia de categoría</li></ul>Si modifica la busqueda, volveremos a mirar y encontraremos el descuento adecuado para usted."
-                    }
-                },
-                "discount": {
-                    "fields": {
-                        "validFor": "Válido hasta:"
-                    },
-                    "buttons": {
-                        "getDiscountOnline": "Obtener descuento online"
-                    }
-                }
-            }
-        </script>
-          
+        </div>
 
-        <script src="https://widgets.isic.org/discounts/discounts-widget.min.js"></script>
-        <discounts-widget access-token="e81a075e-efd1-4fcf-a95c-ed1735101031" application-name="isic-org-discounts-widget"locale="es"  default-location="Panama">
-            <div style="text-align: center; margin-left: 20px;margin-right: 20px;">
-                <div style="display: inline-block; text-align: left; font-family: Roboto,sans-serif;"> 
-                    <h1 style="color: #40b8b8;">Your browser is too old</h1> 
-                    <p style="color: #346562; font-size: 14px;"> 
-                        We're sorry, but your web browser is outdated and doesn't support latest technologies to display our discounts. 
-                        <br/><br/> To enjoy our website, please download the latest version of <a href="https://www.google.com/intl/en/chrome/">Google Chrome</a>, 
-                        <a href="https://www.mozilla.org/en-US/firefox/new/"> Mozilla Firefox</a> or <a href="https://www.microsoft.com/enUS/edge"> Microsoft Edge</a>. 
-                    </p> 
+        <div class="bar">
+            <div class="full-width">
+                <div class="footer-nav">
+                    <nav class="left">
+                        <ul id="menu-footer-navigation" class="menu">
+                            <li id="menu-item-3206" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3206"><a href="descuentos.html">Descuentos para estudiantes</a></li>
+                            <li id="menu-item-299" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-74 current_page_item menu-item-299">
+                                <a href="tarjetas.html" aria-current="page">¿Qué tarjeta le conviene?</a></li>
+                            <li id="menu-item-360" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-360"><a href="obten_tu_tarjeta.html">Obtenga su tarjeta</a></li>
+                            <li id="menu-item-20" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20"><a href="FAQs.html">FAQs</a></li>
+                            <li id="menu-item-18" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18"><a href="sobre_nosotros.html">Sobre nosotros</a></li>
+                            <li id="menu-item-212" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-212"><a href="contactenos.html">Contáctenos</a></li>
+                        </ul>
+                    </nav>
+
+                    <nav class="right">
+                        <ul>
+                            <li>&copy; ISIC <span>todos los derechos reservados</span></li>
+                            <li><a href="https://www.isic.org/privacy-policy/">política de privacidad</a></li>
+                            <li><span>desarrollo: </span><a href="https://www.vhla.net" target="_blank" title="Valhalla Cybernetics">Valhalla Cybernetics</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="social-media">
                 </div>
             </div>
-        </discounts-widget>
-        <div style="margin-bottom: 20px;"></div>
+        </div>
+    </footer>
+    <script type="text/javascript" src="https://www.isic.org/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=4.9.2"></script>
+    <script type='text/javascript' src='https://www.isic.org/wp-includes/js/wp-embed.min.js?ver=5.4.2'></script>
+</body>
 
-        <footer>
-
-            <div class="app-box">
-                <div class="full-width"
-                    style="background: url('https://www.isic.org/wp-content/uploads/2022/09/190514_footer_image_300x360-4-1.png') no-repeat 680px -4px;">
-                    <div class="super-header">Verificación instantánea de estudiantes</div>
-                    <div class="content">
-                        Descargue la aplicación global ISIC y obtenga un carné virtual ISIC para demostrar su condición de estudiante en un instante y disfrutar de descuentos sobre la marcha.
-                        al instante y disfrutar de descuentos sobre la marcha.<br />
-    
-                        <div class="wrapper">
-                            <a class="app-store" href="https://apps.apple.com/us/app/isic/id886109982" target="_blank">
-                                <img src="https://www.isic.org/wp-content/themes/isic2013/images/app_store.png" />
-                            </a>
-                            <a class="play-store" href="https://play.google.com/store/apps/details?id=nl.jool.isic"
-                                target="_blank">
-                                <img src="https://www.isic.org/wp-content/themes/isic2013/images/play_store.png" />
-                            </a>
-                            <a class="play-store"
-                                href="https://appgallery.cloud.huawei.com/ag/n/app/C101900333?channelId=ISIC&id=e4f4cc74dce9475194918080d55ae7ad&s=8FC6567E9BFD655B4337E695BEB0C201F9A90ADE28EFA24277A616972A840DB7&detailType=0&v="
-                                target="_blank">
-                                <img src="https://www.isic.org/wp-content/uploads/2021/03/appgallery.png" height="45" />
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    
-            <div class="bar">
-                <div class="full-width">
-                    <div class="footer-nav">
-                        <nav class="left">
-                            <ul id="menu-footer-navigation" class="menu">
-                                <li id="menu-item-3206"
-                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3206"><a
-                                        href="descuentos.html">Descuentos para estudiantes</a></li>
-                                <li id="menu-item-299"
-                                    class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-74 current_page_item menu-item-299">
-                                    <a href="tarjetas.html" aria-current="page">¿Qué tarjeta le conviene?</a></li>
-                                <li id="menu-item-360"
-                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-360"><a
-                                        href="obten_tu_tarjeta.html">Obtenga su tarjeta</a></li>
-                                <li id="menu-item-20"
-                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20"><a
-                                        href="FAQs.html">FAQs</a></li>
-                                <li id="menu-item-18"
-                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18"><a
-                                        href="sobre_nosotros.html">Sobre nosotros</a></li>
-                                <li id="menu-item-212"
-                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-212"><a
-                                        href="contactenos.html">Contáctenos</a></li>
-                            </ul>
-                        </nav>
-    
-                        <nav class="right">
-                            <ul>
-                                <li>&copy; ISIC <span>todos los derechos reservados</span></li>
-                                <li><a href="https://www.isic.org/privacy-policy/">política de privacidad</a></li>
-                                <li><span>desarrollo: </span><a href="https://www.vhla.net" target="_blank"
-                                        title="Valhalla Cybernetics">Valhalla Cybernetics</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-    
-                    <div class="social-media">
-                    </div>
-                </div>
-            </div>
-        </footer>
-        <script type="text/javascript" src="https://www.isic.org/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=4.9.2"></script>
-        <script type='text/javascript' src='https://www.isic.org/wp-includes/js/wp-embed.min.js?ver=5.4.2'></script>
-    </body>
 </html>
-
