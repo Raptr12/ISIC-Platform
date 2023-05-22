@@ -87,7 +87,7 @@
         input[type="text"],
         input[type="email"],
         textarea {
-            width: 100%;
+            width: calc(100% - 20px);
             padding: 10px;
             margin-bottom: 15px;
             border: none;
@@ -95,18 +95,38 @@
             box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
         }
         
-        button[type="submit"] {
+        .button-container {
+            display: flex;
+            justify-content: flex-start; /* Alinear los botones a la izquierda */
+            gap: 10px; /* Espacio entre los botones */
+        }
+
+        button {
             background-color: #40b8b8;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease-in-out;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background-color: #359999;
+        }
+
+        .second {
+            background-color: #25d366;
             color: white;
             padding: 10px 20px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
             transition: background-color 0.3s ease-in-out;
+            
         }
-        
-        button[type="submit"]:hover {
-            background-color: #359999;
+        .second:hover {
+            background-color: #65df91;
         }
     </style>
 </head>
@@ -143,9 +163,6 @@
                     </li>
                     <li class="menu-item">
                         <a href="sobre_nosotros.html">Nosotros</a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="FAQs.html">FAQs</a>
                     </li>
                     <li class="menu-item">
                         <a href="contactenos.html">Contáctenos</a>
@@ -201,8 +218,8 @@
                                         </div>
                                         <div>
                                             <br>
-                                            <h3 data-v-c2cd7192="">Correo de contacto</h3>
-                                            <div data-v-c2cd7192="" class="description-wrapper">
+                                            <h3>Correo de contacto</h3>
+                                            <div class="description-wrapper">
                                                 <strong>vielka.gomez@otec.com.pa</strong>
                                                 <form action="#" method="post" class="contact-form">
                                                     <label for="name">Nombre completo</label>
@@ -214,7 +231,10 @@
                                                     <label for="message">Mensaje</label>
                                                     <textarea name="message" id="message" required></textarea>
 
-                                                    <button type="submit">Enviar mensaje</button>
+                                                    <div class="button-container">
+                                                        <button type="submit">Enviar mensaje</button>
+                                                        <a href="https://wa.me/50766559985" target={'_blank'}><img src="assets/WhatsAppButtonGreenSmall.png" alt="Chat on WhatsApp" style="width: 190px"/></a>
+                                                    </div>
                                                 </form>
                                             </div>
                                         </div>
