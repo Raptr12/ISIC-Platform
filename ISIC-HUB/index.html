@@ -14,19 +14,19 @@
     <script type="text/javascript" src="https://www.isic.org/wp-content/themes/isic2013/js/page.js?v=2"></script>
     <style>
         .nosotros-entidades-box ul {
-            display: table;
+            display: flex;
             list-style: none;
+            flex-wrap: wrap;
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
             width: 100%;
             text-align: center;
+            justify-content: center;
         }
         
         .nosotros-entidades-box ul li {
-            display: inline-block;
-            vertical-align: top;
             margin: 10px;
-            width: calc(25% - 20px);
             /* se especifica el ancho de cada elemento, teniendo en cuenta los márgenes */
         }
         
@@ -37,6 +37,31 @@
             height: auto;
             /* Change height to auto for responsiveness */
             object-fit: cover;
+        }
+
+        .footer content{
+            display: flex; 
+            flex-direction: row;
+            flex-wrap: wrap; 
+            width: 70%; 
+            align-items: center; 
+            justify-content: center;
+        }
+
+        .footer-app-msg{
+            width: 65%;
+            display: flex; 
+            flex-direction: column; 
+            padding: 10px; 
+            box-sizing: border-box;
+        }
+
+        .footer-app-img{
+            width: 35%;
+        }
+
+        .footer-menu{
+            background-color: cyan;
         }
         
         @media (max-width: 767px) {
@@ -57,7 +82,6 @@
                 height: auto;
             }
             .slide img {
-                width: 100%;
                 height: auto;
             }
             .slide .buttons {
@@ -144,6 +168,10 @@
         .submenu li a:hover {
             background-color: #e0e0e0;
         }
+        .verify-students{
+            background-color: yellow;
+        }
+
     </style>
 </head>
 
@@ -200,7 +228,7 @@
 			<li
 			  class="slide"
 			  style="
-				background-image: url(assets/benefits.png); background-size: cover; height: 600px;
+				background-image: url(assets/benefits.png); background-size: cover; height: 565px;
 			  "
 			>
 			  <div class="content">
@@ -214,7 +242,7 @@
 				</div>
 			  </div>
 			</li>
-			<li class="slide" style="background-image: url(assets/powerclub.png); background-size: cover; height: 600px;">
+			<li class="slide" style="background-image: url(assets/powerclub.png); background-size: cover; height: 565px;">
 				<div class="content">
 					<div class="buttons">
 						<a class="btn-dark" href="descuentos.html?providerId=254086"><span>Ingrese Aqui</span></a
@@ -225,7 +253,7 @@
 			<li
 			  class="slide"
 			  style="
-				background-image: url(assets/5.png); background-size: cover; height: 600px;
+				background-image: url(assets/5.png); background-size: cover; height: 565px;
 			  "
 			>
 			  <div class="content">
@@ -240,13 +268,13 @@
 			<li
 			  class="slide"
 			  style="
-				background-image: url(assets/1.png); background-size: contain; background-position: center; height: 600px;
+				background-image: url(assets/2.png); background-size: contain; background-position: center; height: 565px;
 			  "
 			>
 			  <div class="content">
 				
 				<div class="buttons">
-				  <a class="btn-dark" href="obten_tu_tarjeta.html"
+				  <a class="btn-dark" href="activa_tu_carnet.html"
 					><span>Ingresa Aquí</span></a
 				  >
 				</div>
@@ -255,13 +283,13 @@
 			<li
 			  class="slide"
 			  style="
-				background-image: url(assets/2.png); background-size: contain; background-position: center; height: 600px;
+				background-image: url(assets/obten.png); background-size: contain; background-position: center; height: 565px;
 			  "
 			>
 			  <div class="content">
 			
 				<div class="buttons">
-				  <a class="btn-dark" href="activa_tu_carnet.html"
+				  <a class="btn-dark" href="obten_tu_tarjeta.html"
 					><span>Ingresa Aquí</span></a
 				  >
 				</div>
@@ -320,7 +348,7 @@
                             </div>
                             <div class="card-content">
                                 <h3>Descuentos Internacionales</h3>
-                                <a href="descuentos.html" class="btn">Ingrese aquí</a>
+                                <a href="descuentos-int.html" class="btn">Ingrese aquí</a>
                             </div>
                         </div>
                     </section>
@@ -354,13 +382,14 @@
         </div>
     </div>
 
-    <footer>
-
-        <div class="app-box">
-            <div class="full-width" style="background: url('https://www.isic.org/wp-content/uploads/2022/09/190514_footer_image_300x360-4-1.png') no-repeat 680px -4px;">
+    <footer style="display: flex; flex-direction: column; align-items: center;">
+        <div class="footer content">
+            <div class="footer-app-msg">
                 <div class="super-header">Verificación instantánea de estudiantes</div>
                 <div class="content">
-                    Descargue la aplicación global ISIC y obtenga un carné virtual ISIC para demostrar su condición de estudiante en un instante y disfrutar de descuentos sobre la marcha. al instante y disfrutar de descuentos sobre la marcha.<br />
+                    <div style="margin: 0 0 20px 0;">
+                        Descargue la aplicación global ISIC y obtenga un carné virtual ISIC para demostrar su condición de estudiante en un instante y disfrutar de descuentos sobre la marcha. al instante y disfrutar de descuentos sobre la marcha.
+                    </div>
 
                     <div class="wrapper">
                         <a class="app-store" href="https://apps.apple.com/us/app/isic/id886109982" target="_blank">
@@ -375,13 +404,16 @@
                     </div>
                 </div>
             </div>
+            <div class="footer-app-img">
+                <img src="https://www.isic.org/wp-content/uploads/2022/09/190514_footer_image_300x360-4-1.png" alt="" srcset="">
+            </div>
         </div>
 
-        <div class="bar">
+        <div class="footer-menu" style="width: 100%;">
             <div class="full-width">
                 <div class="footer-nav">
                     <nav class="left">
-                        <ul id="menu-footer-navigation" class="menu">
+                        <ul id="menu-footer-navigation" class="menu" style="ist-style: none;">
                             <li id="menu-item-3206" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3206"><a href="descuentos.html">Descuentos para estudiantes</a></li>
                             <li id="menu-item-299" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-74 current_page_item menu-item-299">
                                 <a href="tarjetas.html" aria-current="page">¿Qué tarjeta le conviene?</a></li>
@@ -396,7 +428,7 @@
                         <ul>
                             <li>&copy; ISIC <span>todos los derechos reservados</span></li>
                             <li><a href="https://www.isic.org/privacy-policy/">política de privacidad</a></li>
-                            <li><span>desarrollo: </span><a href="https://www.vhla.net" target="_blank" title="Valhalla Cybernetics">Valhalla Cybernetics</a></li>
+                            <li><span>Desarrollo: </span><a href="https://www.vhla.net" target="_blank" title="Valhalla Cybernetics">Valhalla Cybernetics</a></li>
                         </ul>
                     </nav>
                 </div>
